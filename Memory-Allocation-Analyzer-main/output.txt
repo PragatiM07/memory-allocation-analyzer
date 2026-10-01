@@ -1,0 +1,30 @@
+Overall analysis
+
+    Total number of lines = 63
+    Total number of functions = 3
+    Total local variables = 5
+    Total dynamic variables = 2
+    Total global variables = 3
+
+###### Data Section ######
+
+    ex.txt
+
+###### data Section ######
+
+int globalVar = 10;  globalVar  is a reference variable of these (4 bytes)
+float f_val=4.3;  f_val is a reference variable of these (4 bytes)
+int  i_val= 5 ;   i_val is a reference variable of these (4 bytes)
+
+###### Stack Section ######
+
+    int size = 5;     int size  is a reference variable of these (4 bytes)
+    int* ptr = nullptr;     int* ptr  is a reference variable of these (4 bytes)
+    ptr = new int[size];     ptr  is a reference variable of these (4 bytes)
+    int* localPtr =new int[size];     int* localPtr  is a reference variable of these (4 bytes)
+    double d_var=3.45676789;     double d_var is a reference variable of these (8 bytes)
+
+###### Heap Section ######
+
+    ptr = new int[size];     ptr  is a reference variable of these (4 bytes)
+    int* localPtr =new int[size];     int* localPtr  is a reference variable of these (4 bytes)

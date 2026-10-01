@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int globalVar = 10;
+
+void allocateMemory(int size);
+void printValues(int* ptr, int size);
+
+int main() {
+    int size = 5;
+    int* ptr = nullptr;
+
+    allocateMemory(size);
+
+    ptr = new int[size];
+
+    for (int i = 0; i < size; ++i) {
+        ptr[i] = i + 1;
+    }
+
+    printValues(ptr, size);
+
+    delete[] ptr;
+    ptr = nullptr;
+
+    return 0;
+}
+
+ 
+
+float f_val=4.3;
+
+void allocateMemory(int size) {
+    int* localPtr =new int[size];
+    cout << "Memory allocated in function 'allocateMemory' for size: " << size << endl;
+
+    for (int i = 0; i < size; ++i) {
+        localPtr[i] = (i + 1) * 10;
+    }
+
+    double d_var=3.45676789;
+    cout << "Values in dynamically allocated array (local): ";
+    for (int i = 0; i < size; ++i) {
+        cout << localPtr[i] << " ";
+    }
+    cout << endl;
+
+    delete[] localPtr;
+    localPtr = nullptr;
+}
+
+int  i_val= 5 ;
+
+void printValues(int* ptr, int size) {
+    cout << "Values in dynamically allocated array (from printValues): ";
+    for (int i = 0; i < size; ++i) {
+        cout << ptr[i] << " ";
+    }
+    cout << endl;
+}
+
